@@ -1,0 +1,10 @@
+<a ui-sref="home">Back to Current Jobs</a>
+<div ng-repeat="cust in customersArchive track by $index"  class="archived-job">
+  <br>
+    <ul>
+        <li class="archive-name">{{cust.lastName}}</li>
+        <li class="archive-time">{{cust.jobNumber}}</li>
+        <li class="archive-time">{{cust.time}}</li>
+    </ul>
+    <br>
+</div>
