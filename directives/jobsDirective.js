@@ -3,7 +3,7 @@ angular.module('app')
 
 function jobsDirective() {
     return {
-        templateUrl: '/directives/job.html',
+        templateUrl: 'https://thetopazwombat.github.io/no-server/directives/job.html',
         link: function(scope, element, attr) {
 
             $(element).on('click', function() {
