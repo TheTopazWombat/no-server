@@ -6,10 +6,10 @@ angular.module('app')
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'https://thetopazwombat.github.io/no-server/views/home.html',
+        templateUrl: '/views/home.html',
       })
       .state('archive', {
         url: '/archive',
-        templateUrl: 'https://thetopazwombat.github.io/no-server/views/archive.html',
+        templateUrl: '/views/archive.html',
       });
   });

@@ -3,7 +3,7 @@ angular.module('app')
 
 function jobsDirective() {
     return {
-        templateUrl: 'https://thetopazwombat.github.io/no-server/directives/job.html',
+        templateUrl: '/directives/job.html',
         link: function(scope, element, attr) {
 
             $(element).on('click', function() {
@@ -21,6 +21,9 @@ function jobsDirective() {
                     'font-size': '24px'
                 });
             }
+            setTimeout(function() {
+                $('.open-new-job').removeClass('animated');
+            }, 1000);
             // $('.start-btn').on('click', function() {
             //     $('#time-spent').addClass('animated wobble infinite');
             //
