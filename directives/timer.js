@@ -6,7 +6,7 @@ angular.module('app')
                 // scope: {
                 //     cust: '=',
                 // },
-                templateUrl: '/directives/timer.html',
+                templateUrl: 'https://thetopazwombat.github.io/no-server/directives/timer.html',
                 controller: function($scope, $interval) {
                     $scope.counter = 0;
                     $scope.runClock = null;
