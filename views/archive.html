@@ -1,9 +1,12 @@
-<a ui-sref="home">Back to Current Jobs</a>
-<div ng-repeat="cust in customersArchive track by $index"  class="archived-job">
+<input type="text" ng-model="archiveFilter" placeholder="Search the Archives" id="archive-search">
+
+<br>
+
+<div ng-repeat="cust in customersArchive| filter: {lastName: archiveFilter} track by $index"  class="archived-job animated bounceInUp" ng-animate="animate">
   <br>
     <ul>
         <li class="archive-name">{{cust.lastName}}</li>
-        <li class="archive-time">{{cust.jobNumber}}</li>
+        <li class="archive-num">{{cust.jobNumber}}</li>
         <li class="archive-time">{{cust.time}}</li>
     </ul>
     <br>

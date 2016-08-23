@@ -68,8 +68,8 @@ main {
 }*/
 
 .open-new-job {
-  width: 200px;
-  height: 30px;
+  width: 80px;
+  height: 80px;
   background-color: #335252;
   opacity: 0.8;
   border-radius: 5px;
@@ -82,7 +82,7 @@ main {
   text-align: center;
   transition: all 0.3s ease;
   font-weight: 700;
-  margin-left: 100px;
+  margin-left: 90%;
 }
 
 .open-new-job:hover {
@@ -172,7 +172,7 @@ main {
     float: left;
     margin-left: 10px;
     margin-bottom: 15px;
-    /*opacity: 0;*/
+    opacity: 0.95;
     text-align: center;
     background-color: #335252;
     transition: all .3s ease-in-out;
@@ -188,7 +188,8 @@ main {
 }
 
 .list-job:hover {
-  transform: scale(1.1) !important
+  transform: scale(1.1) !important;
+  opacity: 1;
 }
 
 .current-checkbox-grid li{
@@ -198,25 +199,6 @@ main {
   text-align:left;
   margin-left: 25px;
 }
-
-/*.list-job.archiving {
-    opacity: 0;
-    animation: new-item-animation .3s linear forwards;
-}
-@keyframes new-item-animation {
-    from {
-        opacity: 0;
-        transform: translateY(-400px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}*/
-/*.list-job.clicked {
-    -webkit-transform: width(400px) height(400px);
-    transform: translate(400px) height(400px);
-}*/
 
 .archive-btn {
   border-style:  none;
@@ -295,14 +277,24 @@ main {
 .archived-job {
   margin-left: 20px;
   margin-top: 5px;
-  background-color: #ccc;
-  border: 3px solid black;
+  background-color: #335252;
+  border: 3px solid #2D3033;
   border-radius: 5px;
   font-size: 18px;
   text-align: center;
   width: 150px;
   float: left;
+  opacity: 0.9;
+  color: white;
 }
+
+#archive-search {
+  margin-left: 20px;
+}
+
+/*.archived-job li {
+  opacity: 1;
+}*/
 
 #new-button {
 
