@@ -4,18 +4,18 @@ angular.module('app')
     $scope.saveJobData = function() {
       mainSrv.saveCm();
     };
-    $scope.chckIn = false;
-    $scope.rCharged = false;
+    $scope.checked_in = false;
+    $scope.recharged = false;
     $scope.customers = mainSrv.customerArr;
     console.log($scope.customers);
-    $scope.addJob = function(jobNum, name, prod, check, rCharged) {
-      console.log($scope.chckIn);
+    $scope.addJob = function(jobNum, name, prod, check, recharged) {
+      console.log($scope.checked_in);
       var job = {
-        jobNumber: jobNum,
-        lastName: name,
+        job_number: jobNum,
+        last_name: name,
         product: prod,
         checkedIn: check,
-        recharged: rCharged,
+        recharged: recharged,
       };
       if (jobNum && name && prod) {
         $scope.customers.push(job);
