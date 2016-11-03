@@ -31,7 +31,7 @@ angular.module('app')
                         $interval.cancel($scope.runClock);
                         $scope.runClock = null;
                         // $scope.cust.time = $scope.time;
-                        $scope.saveJobData();
+                        $scope.saveJobData($scope.cust);
                         console.log($scope.customers);
                     };
 

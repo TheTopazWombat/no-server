@@ -4,6 +4,8 @@ angular.module('app')
   function mainSrv ($http) {
     this.customersArchive = [];
     this.customerArr = [];
+    this.archivedJobs = [];
+    this.activeJobs = [];
     if (localStorage.getItem('customers')) {
       this.customerArr = JSON.parse(localStorage.getItem('customers'));
     }
@@ -36,6 +38,8 @@ angular.module('app')
         method: 'POST',
         url: '/api/jobs/new',
         data: job,
+      }).then(function(response) {
+        return response.data;
       });
     };
 
@@ -49,5 +53,14 @@ angular.module('app')
       });
     };
 
+    this.updateJob = function(job) {
+      return $http({
+        method: 'PUT',
+        url: '/api/jobs/update',
+        data: job
+      }).then(function(response) {
+        return response.data;
+      });
+    };
 
   }
