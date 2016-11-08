@@ -10,7 +10,9 @@ insert into jobs
     recharged,
     counter,
     customer_approval,
-    archived
+    archived,
+    escalated,
+    creation_date
   )
   values (
     $1,
@@ -23,6 +25,8 @@ insert into jobs
     $8,
     $9,
     $10,
-    'false'
+    'false',
+    $11,
+    $12
   )
   returning *;

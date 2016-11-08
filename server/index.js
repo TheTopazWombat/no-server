@@ -44,7 +44,7 @@ app.get('/api/jobs/all', function(req, res, next){
 });
 
 app.post('/api/jobs/new', function(req, res, next) {
-  db.post_new_job([req.body.job_number, req.body.time, req.body.checked_in, req.body.final_test, req.body.recharged, req.body.counter, req.body.customer_approval, req.body.escalated, req.body.creation_date], function(err, response) {
+  db.post_new_job([req.body.job_number, req.body.last_name, req.body.product, req.body.tech_assigned, req.body.time, req.body.checked_in, req.body.final_test, req.body.recharged, req.body.counter, req.body.customer_approval, req.body.escalated, req.body.creation_date], function(err, response) {
     if (err) {
       console.log(err);
       res.set(401).send("There was an error posting the job");
@@ -56,7 +56,7 @@ app.post('/api/jobs/new', function(req, res, next) {
 });
 
 app.put('/api/jobs/update', function(req, res, next) {
-  db.update_job_by_invoice([req.body.job_number, req.body.last_name, req.body.product, req.body.tech_assigned, req.body.time, req.body.checked_in, req.body.final_test, req.body.recharged, req.body.counter, req.body.customer_approval, req.body.archived], function(err, response) {
+  db.update_job_by_invoice([req.body.job_number, req.body.time, req.body.checked_in, req.body.final_test, req.body.recharged, req.body.counter, req.body.customer_approval, req.body.archived, req.body.escalated, req.body.creation_date], function(err, response) {
     console.log(req.body);
     if (err) {
       console.log(err);

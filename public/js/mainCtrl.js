@@ -33,7 +33,7 @@ angular.module('app')
                 tech_assigned: tek,
                 final_test: finTest,
                 customer_approval: cmApp,
-                creation_date: moment(),
+                creation_date: moment().format('MMM Do YYYY'),
                 escalated: escalated || false
             };
             if (jobNum && name && prod && tek) {
