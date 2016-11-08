@@ -21,7 +21,7 @@ angular.module('app')
         $scope.customer_approval = false;
         $scope.final_test = false;
         $scope.customers = mainSrv.customerArr;
-        $scope.addJob = function(jobNum, name, prod, check, recharged, time, tek, finTest, cmApp) {
+        $scope.addJob = function(jobNum, name, prod, check, recharged, time, tek, finTest, cmApp, escalated) {
             var job = {
                 job_number: jobNum,
                 last_name: name,
@@ -33,6 +33,8 @@ angular.module('app')
                 tech_assigned: tek,
                 final_test: finTest,
                 customer_approval: cmApp,
+                creation_date: moment(),
+                escalated: escalated || false
             };
             if (jobNum && name && prod && tek) {
                 $scope.customers.push(job);

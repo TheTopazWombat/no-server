@@ -25,6 +25,7 @@ var massiveInstance = massive.connectSync({
 app.set('db', massiveInstance);
 
 var db = app.get('db');
+console.log(db);
 
 app.use(express.static(__dirname + '/../public'));
 app.use("node_modules", express.static(__dirname + '/../node_modules'));
@@ -43,7 +44,7 @@ app.get('/api/jobs/all', function(req, res, next){
 });
 
 app.post('/api/jobs/new', function(req, res, next) {
-  db.post_new_job([req.body.job_number, req.body.last_name, req.body.product, req.body.tech_assigned, req.body.time, req.body.checked_in, req.body.final_test, req.body.recharged, req.body.counter, req.body.customer_approval], function(err, response) {
+  db.post_new_job([req.body.job_number, req.body.time, req.body.checked_in, req.body.final_test, req.body.recharged, req.body.counter, req.body.customer_approval, req.body.escalated, req.body.creation_date], function(err, response) {
     if (err) {
       console.log(err);
       res.set(401).send("There was an error posting the job");

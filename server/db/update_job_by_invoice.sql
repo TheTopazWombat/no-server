@@ -1,13 +1,12 @@
 update jobs set
   job_number = $1,
-  last_name = $2,
-  product = $3,
-  tech_assigned = $4,
-  time = $5,
-  checked_in = $6,
-  final_test = $7,
-  recharged = $8, 
-  counter = $9,
-  customer_approval = $10,
-  archived = $11
+  time = $2,
+  checked_in = $3,
+  final_test = $4,
+  recharged = $5,
+  counter = $6,
+  customer_approval = $7,
+  archived = $8,
+  escalated = $9,
+  creation_date = $10
   where job_number = $1;

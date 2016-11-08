@@ -20,7 +20,13 @@
         <input type="checkbox" ng-model="cust.customer_approval" class="check-box" name="customer_approval" value="customer_approval"  ng-click="saveJobData(cust)"/>
         <label for="customer_approval">CM Approval</label>
       </li>
+
+      <li>
+        <input type="checkbox" ng-model="cust.escalated" class="check-box" name="escalated" value="customer_approval"  ng-click="saveJobData(cust)"/>
+        <label for="escalated">Escalated</label>
+      </li>
   </ul>
+  <h4 class="creationDate">{{cust.creation_date}}</h4>
   <br>
   <button type="button" name="button" class="archive-btn" ng-click="archiveJob($index, $event)" >ARCHIVE</button>
   <hr>

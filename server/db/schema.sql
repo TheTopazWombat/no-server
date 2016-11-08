@@ -8,5 +8,8 @@ create table jobs (
   final_test boolean,
   recharged boolean,
   counter integer,
-  customer_approval boolean
+  customer_approval boolean,
+  archived boolean,
+  escalated boolean default 'false',
+  creation_date varchar(400)
 );
